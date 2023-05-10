@@ -135,7 +135,7 @@ img {
   background-color: var(--pressed-state);
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -3px;
 }
 
 .list {
@@ -167,13 +167,23 @@ img {
     margin-right: 76px;
   }
 }
-.link-address {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+@media screen and (min-width:768px) {
+  .link-address {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
+  @media screen and (min-width:1158px) {
+    .link-address {
+      font-size: 16px;
+      line-height: 1.5;
+     
+    } 
+  }
 
 .link-address:hover,
 .link-address:focus {
@@ -203,7 +213,8 @@ img {
   padding-top: 80px;
   padding-left: 40px;
   background-color: var(--white);
-
+  padding-bottom: 40px;
+  padding-right: 24px;
   z-index: 999;
 
   transform: translateX(100%);
@@ -280,7 +291,7 @@ address {
   display: flex;
   gap: 56px;
 }
-@media screen and (max-width:427px) {
+@media screen and (max-width: 427px) {
   .mobile-social-list {
     gap: 28px;
   }
@@ -370,7 +381,7 @@ address {
   letter-spacing: 0.02em;
 
   color: var(--white);
-  max-width: 496px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
@@ -378,6 +389,7 @@ address {
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 56px;
+    max-width: 496px;
   }
 }
 .hero-button {
@@ -484,7 +496,7 @@ address {
     gap: 72px 24px;
   }
   .about-item {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -634,7 +646,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .team-item {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -1058,8 +1070,7 @@ address {
 
 @media screen and (max-width: 1157px) {
   .modal {
-    height: 586px;
-    max-height: 90vh;
+    
     overflow-y: scroll;
   }
 }
@@ -1076,7 +1087,6 @@ address {
 @media screen and (min-width: 1158px) {
   .modal {
     min-height: 576px;
-
   }
 }
 .modal-title {
@@ -1179,6 +1189,7 @@ address {
   fill: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+  flex-shrink: 0;
 }
 .input-check-link {
   color: var(--pressed-state);
